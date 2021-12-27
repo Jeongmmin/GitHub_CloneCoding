@@ -44,6 +44,10 @@
     <!-- reset.css는 다른 css보다 먼저 호출되어야 한다!! -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="(max-width: 1024px)" href="css/main_medium.css">
+    <link rel="stylesheet" media="(max-width: 768px)" href="css/main_small.css">
+
+    <script defer src="main.js" ></script>
 </head>
 
 <body>
@@ -57,7 +61,7 @@
                 <div class="logo">
                     <a href="#">GitHub</a>
                 </div>
-                <ul class="main-menu">
+                <ul class="main-menu toggle">
                     <li><a href="#">Personal</a></li>
                     <li><a href="#">Open source</a></li>
                     <li><a href="#">Business</a></li>
@@ -65,13 +69,13 @@
                 </ul>
             </div>
 
-            <div class="sign-group float--right">
+            <div class="sign-group float--right toggle">
                 <div class="btn-group">
                     <a href="#" class="btn sign-in">Sign in</a>
                     <a href="#" class="btn btn--primary sign-up">Sign up</a>
                 </div>
-                <form id="serch-form" method="post" action="">
-                    <input type="text" id="serch" class="input--text" placeholder="Search GitHub">
+                <form id="search-form" method="post" action="">
+                    <input type="text" id="search" class="input--text" placeholder="Search GitHub">
                     <input type="submit" value="Submit">
                 </form>
                 <ul class="sub-menu">
@@ -80,6 +84,9 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
+
+            <div id="toggle-btn">Header Menu Toggle Button</div>
+
         </div>
     </header>
     
